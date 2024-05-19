@@ -64,6 +64,6 @@ body {
     text-align: center;
 }
 
-.footer-button:hover {
+.footer-button:active {
     background-color: grey;
 }
