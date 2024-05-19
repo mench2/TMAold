@@ -49,9 +49,6 @@ body {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    color: white;
-    border: 1px solid white;
-    border-radius: 5px;
     padding: 10px 0;
     background-color: black;
 }
@@ -59,11 +56,21 @@ body {
 .footer-button {
     background-color: black;
     padding: 10px;
-    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
     flex: 1;
     text-align: center;
 }
 
 .footer-button:active {
     background-color: grey;
+}
+
+.noselect {
+-moz-user-select: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
 }
