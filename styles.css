@@ -51,6 +51,7 @@ body {
 }
 
 .footer-button {
+    text-decoration:none;
     background-color: black;
     padding: 10px;
     color: white;
