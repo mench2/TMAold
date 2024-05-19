@@ -24,6 +24,20 @@ body {
     align-items: center;
 }
 
+.content_friends {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content_08_08 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .white-box {
     width: 200px;
     height: 200px;
