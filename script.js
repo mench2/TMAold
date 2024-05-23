@@ -21,6 +21,10 @@ function moveKnob(angle) {
 function onMouseDown(event) {
     event.preventDefault();
     dragging = true;
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    const angle = getAngle(x, y);
+    moveKnob(angle);
 }
 
 function onMouseMove(event) {
@@ -36,15 +40,26 @@ function onMouseUp() {
 }
 
 function onTouchStart(event) {
-    onMouseDown(event.touches[0]);
+    event.preventDefault();
+    dragging = true;
+    const touch = event.touches[0];
+    const x = touch.clientX - rect.left;
+    const y = touch.clientY - rect.top;
+    const angle = getAngle(x, y);
+    moveKnob(angle);
 }
 
 function onTouchMove(event) {
-    onMouseMove(event.touches[0]);
+    if (!dragging) return;
+    const touch = event.touches[0];
+    const x = touch.clientX - rect.left;
+    const y = touch.clientY - rect.top;
+    const angle = getAngle(x, y);
+    moveKnob(angle);
 }
 
 function onTouchEnd() {
-    onMouseUp();
+    dragging = false;
 }
 
 knob.addEventListener('mousedown', onMouseDown);
